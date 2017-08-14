@@ -1,3 +1,7 @@
+# AGit
+
+I have modified MGit for my personnal usage.
+
 # MGit
 
 MGit is a Git client Android App.
