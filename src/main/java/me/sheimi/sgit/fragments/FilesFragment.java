@@ -24,6 +24,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import org.apache.commons.io.FileUtils;
+
 /**
  * Created by sheimi on 8/5/13.
  */
@@ -184,14 +186,20 @@ public class FilesFragment extends RepoDetailFragment {
      *
      * @param name
      */
-    public void newFile(String name) throws IOException {
+    public File newFile(String name) throws IOException {
         File file = new File(mCurrentDir, name);
         if (file.exists()) {
             showToastMessage(R.string.alert_file_exists);
-            return;
+            return null;
         }
         file.createNewFile();
         setCurrentDir(mCurrentDir);
+        return file;
+    }
+
+    public String readFile(String name) throws IOException {
+        File file = new File(mCurrentDir, name);
+        return FileUtils.readFileToString(file);
     }
 
     @Override

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">MGit</string>
+    <string name="app_name" translatable="false">AGit</string>
     <string name="default_text">Default Text</string>
     <string name="title_clone_repo">Clone Repository</string>
     <string name="preference_file_key" translatable="false">com.manichord.mgit</string>
@@ -107,6 +107,7 @@
     <string name="dialog_create_dir_title">New Directory</string>
     <string name="dialog_create_dir_hint">Directory Name</string>
     <string name="dialog_create_file_title">New File</string>
+    <string name="dialog_create_file_from_template_title">New File From Template</string>
     <string name="dialog_create_file_hint">File Name</string>
     <string name="dialog_comfirm_checkout_commit_title">Confirm Checkout</string>
     <string name="dialog_comfirm_checkout_commit_msg">Checkout Branch</string>
