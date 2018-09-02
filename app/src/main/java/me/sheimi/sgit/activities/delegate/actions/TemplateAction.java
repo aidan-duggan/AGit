@@ -1,12 +1,8 @@
 package me.sheimi.sgit.activities.delegate.actions;
 
-import android.app.Application;
-import android.content.Context;
-
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 import me.sheimi.android.activities.SheimiFragmentActivity;

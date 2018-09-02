@@ -190,7 +190,7 @@ public class FilesFragment extends RepoDetailFragment {
         File file = new File(mCurrentDir, name);
         if (file.exists()) {
             showToastMessage(R.string.alert_file_exists);
-            return null;
+            return file;
         }
         file.createNewFile();
         setCurrentDir(mCurrentDir);

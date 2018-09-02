@@ -26,13 +26,13 @@ import me.sheimi.sgit.activities.delegate.actions.RemoveRemoteAction;
 import me.sheimi.sgit.activities.delegate.actions.RepoAction;
 import me.sheimi.sgit.activities.delegate.actions.ResetAction;
 import me.sheimi.sgit.activities.delegate.actions.TemplateAction;
+import me.sheimi.sgit.activities.delegate.actions.CopyToRepoAction;
 import me.sheimi.sgit.database.models.Repo;
 import me.sheimi.sgit.repo.tasks.SheimiAsyncTask.AsyncTaskPostCallback;
 import me.sheimi.sgit.repo.tasks.repo.AddToStageTask;
 import me.sheimi.sgit.repo.tasks.repo.CheckoutFileTask;
 import me.sheimi.sgit.repo.tasks.repo.CheckoutTask;
 import me.sheimi.sgit.repo.tasks.repo.DeleteFileFromRepoTask;
-import me.sheimi.sgit.repo.tasks.repo.FetchTask;
 import me.sheimi.sgit.repo.tasks.repo.MergeTask;
 
 import org.eclipse.jgit.lib.Ref;
@@ -50,6 +50,8 @@ public class RepoOperationDelegate {
     }
 
     private void initActions() {
+        mActions.add(new TemplateAction(mRepo, mActivity));
+        mActions.add(new CopyToRepoAction(mRepo, mActivity));
         mActions.add(new NewBranchAction(mRepo,mActivity));
         mActions.add(new PullAction(mRepo, mActivity));
         mActions.add(new PushAction(mRepo, mActivity));
@@ -68,7 +70,6 @@ public class RepoOperationDelegate {
         mActions.add(new DeleteAction(mRepo, mActivity));
         mActions.add(new RawConfigAction(mRepo, mActivity));
         mActions.add(new ConfigAction(mRepo, mActivity));
-        mActions.add(new TemplateAction(mRepo, mActivity));
     }
 
     public void executeAction(int key) {

@@ -14,6 +14,7 @@
         <item>Löschen (force, mit aktuellen Änderungen)</item>
     </string-array>
     <string-array name="repo_operation_names">
+        <item>Template</item>
         <item>Neuer Branch</item>
         <item>Pull</item>
         <item>Push</item>

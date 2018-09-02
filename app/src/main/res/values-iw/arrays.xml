@@ -13,6 +13,7 @@
     <item>Remove force from repository</item>
   </string-array>
   <string-array name="repo_operation_names">
+      <item>Template</item>
     <item>סניף חדש</item>
     <item>משוך</item>
     <item>דחוף</item>
