@@ -1,57 +1,29 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.github.ben-manes.versions'
-
 buildscript {
+    ext.kotlin_version = '1.2.41'
+    ext.android_plugin_version = '3.0.1'
+
     repositories {
+        google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
-repositories {
-    jcenter()
-}
-
-android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
-
-    defaultConfig {
-        applicationId "com.manichord.mgit"
-        minSdkVersion 16
-        targetSdkVersion 22
-
-        versionCode 204
-        versionName "1.5.3"
-    }
-
-    dataBinding {
-        enabled = true
-    }
-
-    lintOptions {
-        abortOnError false
+allprojects {
+    repositories {
+        google()
+        jcenter()
     }
 }
 
-dependencies {
-    debugCompile 'com.facebook.stetho:stetho:1.5.0'
-    debugCompile 'com.facebook.stetho:stetho-timber:1.5.0'
 
-    compile 'com.android.support:support-v13:25.3.1'
-    compile 'com.jakewharton.timber:timber:4.5.1'
-    compile 'com.jcraft:jsch:0.1.54'
-    compile 'commons-io:commons-io:2.5'
-    compile 'org.eclipse.jgit:org.eclipse.jgit:3.7.1.201504261725-r'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-    compile 'com.scottyab:secure-preferences-lib:0.1.4'
-    compile 'ch.acra:acra:4.9.2'
-
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.robolectric:robolectric:3.1.2'
-    testCompile 'org.robolectric:shadows-support-v4:3.0'
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
+
