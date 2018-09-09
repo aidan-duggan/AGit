@@ -8,14 +8,14 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "com.manichord.mgit"
+        applicationId "com.whilegaming.agpht"
         minSdkVersion 19
         targetSdkVersion 27
 
         vectorDrawables.useSupportLibrary = true
 
-        versionCode 212
-        versionName "1.5.4.7"
+        versionCode 1
+        versionName "1.0.0.0"
     }
 
     dataBinding {
