@@ -1,4 +1,4 @@
-# AGit
+# Agpht
 
 This is a fork of https://github.com/maks/MGit to add bespoke support for managing Github Pages through MGit. All credit goes to the original creators.
 
